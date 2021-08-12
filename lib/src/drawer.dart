@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-
-
-
 class DrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Drawer Menu')
+        title: Text('Worship Planning')
       ),
 
       drawer: Drawer(
@@ -16,33 +13,19 @@ class DrawerMenu extends StatelessWidget {
           padding: EdgeInsets.all(0.0),
           children: <Widget>[
               UserAccountsDrawerHeader(
-                accountName: Text('Roberto Aleydon'),
-                accountEmail: Text('aleydon@gmail.com'),
-                 currentAccountPicture: CircleAvatar(
-                      backgroundImage: ExactAssetImage('assets/aleydon.jpg'),
+                accountName: Text('ADMIN'),
+                accountEmail: Text('admin@worshipplaning.com'),
+                currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.deepPurpleAccent,
                   ),
-
-                otherAccountsPictures: <Widget>[
-                  CircleAvatar(
-                    child: Text('A'),
-                    backgroundColor: Colors.white60,
-                    ),
-                    CircleAvatar(
-                        child: Text('R'),
-                    ),
-                  ],
 
                 onDetailsPressed: (){},
 
 
-                decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/fundo.jpg"),
-                     fit: BoxFit.cover)
-              ),),
+              ),
 
              ListTile(
-                title: Text('Profile'),
+                title: Text('Perfil'),
                 leading: Icon(Icons.person),
                 onLongPress: (){},
                 ),
@@ -52,41 +35,41 @@ class DrawerMenu extends StatelessWidget {
 
 
               ListTile(
-                title: Text('New Group'),
-                leading: Icon(Icons.group_add),
+                title: Text('Tesorería'),
+                leading: Icon(Icons.money),
+                onTap: (){
+                  Navigator.of(context).pop();}
                 ),
 
               ListTile(
-                title: Text('New Chat'),
-                leading: Icon(Icons.chat),
-                onLongPress: (){},
+                title: Text('Inventario'),
+                leading: Icon(Icons.inventory),
+                onTap: (){
+                  Navigator.of(context).pop();}
                 ),
-
 
               ListTile(
-                title: Text('Calls'),
-                leading: Icon(Icons.call),
-                onLongPress: (){},
+                title: Text('Membresía'),
+                leading: Icon(Icons.group),
+                onTap: (){
+                  Navigator.of(context).pop();}
                 ),
 
+              ListTile(
+                title: Text('Eventos'),
+                leading: Icon(Icons.calendar_today),
+                onTap: (){
+                  Navigator.of(context).pop();}
+                ),
+
+              ListTile(
+                title: Text('Documentos'),
+                leading: Icon(Icons.document_scanner),
+                onTap: (){
+                  Navigator.of(context).pop();}
+                ),
 
               Divider(),
-
-
-              ListTile(
-                title: Text('Settings'),
-                leading: Icon(Icons.settings),
-                onLongPress: (){},
-                ),
-
-              Divider(),
-
-              ListTile(
-                title: Text('Support'),
-                leading: Icon(Icons.report_problem),
-                onLongPress: (){},
-                ),
-
 
               ListTile(
                 title: Text('Close'),
