@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../documentos.dart';
+import '../eventos.dart';
+import '../inventario.dart';
+import '../membresia.dart';
+import '../tesoreria.dart';
+
 class DrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,41 +44,61 @@ class DrawerMenu extends StatelessWidget {
                 title: Text('Tesorería'),
                 leading: Icon(Icons.money),
                 onTap: (){
-                  Navigator.of(context).pop();}
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Tesoreria()),
+                );}
+                  //Navigator.of(context).pop();}
                 ),
 
               ListTile(
                 title: Text('Inventario'),
                 leading: Icon(Icons.inventory),
                 onTap: (){
-                  Navigator.of(context).pop();}
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Inventario()),
+                );}
+                  //Navigator.of(context).pop();}
                 ),
 
               ListTile(
                 title: Text('Membresía'),
                 leading: Icon(Icons.group),
                 onTap: (){
-                  Navigator.of(context).pop();}
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Membresia()),
+                );}
+                  //Navigator.of(context).pop();}
                 ),
 
               ListTile(
                 title: Text('Eventos'),
                 leading: Icon(Icons.calendar_today),
                 onTap: (){
-                  Navigator.of(context).pop();}
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Eventos()),
+                );}
+                  //Navigator.of(context).pop();}
                 ),
 
               ListTile(
                 title: Text('Documentos'),
                 leading: Icon(Icons.document_scanner),
                 onTap: (){
-                  Navigator.of(context).pop();}
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Documentos()),
+                );}
+                  //Navigator.of(context).pop();}
                 ),
 
               Divider(),
 
               ListTile(
-                title: Text('Close'),
+                title: Text('Cerrar'),
                 leading: Icon(Icons.close),
                 onTap: (){
                   Navigator.of(context).pop();}
